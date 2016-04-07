@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 var request = require('request');
 var app = express();
 
-var template = (name, description) => `Taco of the Month is ${name}. The ingredients are ${description}`;
+var template = (name, description) => `The current special is ${name}. The ingredients are ${description}`;
  
 app.get('/torchys', (req, res) => {
   request('http://torchystacos.com/menu/', (error, response, body) => {
