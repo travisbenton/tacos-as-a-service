@@ -46,4 +46,6 @@ app.get('/tacodeli', (req, res) => {
   });
 });
  
-app.listen(3000)
+var server = app.listen(process.env.PORT || 5000, function(){
+  console.log('server is running at %s', server.address().port);
+});
